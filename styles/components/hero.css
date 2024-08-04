@@ -1,0 +1,321 @@
+/* Hero Section  */
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.header__mode {
+    position: fixed;
+    bottom:2.8rem;
+    right:2rem;
+    z-index: 111; 
+    border: 0.2rem solid var(--clr-slate600);
+    border-radius: 50%;
+    background: var(--clr-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__sun {
+    color: var(--clr-slate600);
+    width: var(--size-5xl);
+    height: var(--size-5xl);
+}
+
+.hero__main-image{
+    width:12rem;
+    height:12rem;
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.hero__image{
+    width:90%;
+    height:90%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.circle-spin{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%) rotate(0);
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    border-top:0.2rem solid var(--clr-rose);
+    border-bottom:0.2rem solid var(--clr-rose);
+    border-left:0.2rem solid var(--clr-dark);
+    border-right:0.2rem solid var(--clr-dark);
+    animation:aboutSpinner 8s linear infinite;
+}
+
+.hero__subtitle{
+    color:var(--clr-slate800);
+    font-size: var(--size-base);
+    line-height: 0.9;
+}
+
+.hero__title{
+    color:var(--clr-slate400);
+    text-transform: uppercase;
+    font-size:var(--size-3xl);
+    letter-spacing: 0.09rem;
+    line-height:0.9;
+    user-select: none;
+    /* text-align: ; */
+}
+.hero__content{
+    max-width: 60ch;
+    font-size: var(--size-base);
+    color:var(--clr-slate600);
+}
+.hero__navigate{
+    font-size: var(--size-sm);
+    text-transform: capitalize;
+}
+.text-animate{
+    position: relative;
+    width:32.8rem;
+}
+.text-animate .hero__title::before{
+    position:absolute;
+    content:'';
+    top:0;
+    left:0;
+    width:0;
+    height:100%;
+    border-right:2px solid var(--clr-slate400);
+    z-index:-1;
+    animation: homeCursorText 6s linear 2.2s infinite;
+}
+.text-animate .hero__title{
+    font-size: 3.2rem;
+    font-weight: 700;
+    color:transparent;
+    -webkit-text-stroke: .7px var(--clr-slate400);
+    background-image: linear-gradient(var(--clr-slate400),var(--clr-slate400));
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -33rem 0;
+    animation: homeBgText 6s linear 2.2s infinite;
+}
+
+@keyframes aboutSpinner{
+    100%{
+        transform:translate(-50%,-50%) rotate(360deg);
+    }
+}
+@keyframes homeBgText{
+    0%,10%,100%{
+        background-position: -33rem 0;
+    }
+    65%,85%{
+        background-position: 0 0;
+    }
+}
+@keyframes homeCursorText{
+    0%,10%,100%{
+        width:0;
+    }
+    65%,78%,85%{
+        width:100%;
+        opacity:1;
+    }
+    75%,81%{
+        opacity:0;
+    }
+}
+
+/* Media Queries */
+
+@media (min-width: 300px) {
+    .header__mode {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header__sun {
+        color: var(--clr-slate600);
+        width: var(--size-5xl);
+        height: var(--size-5xl);
+    }
+}
+
+@media (min-width:280px){
+    .hero__main-image{
+        width:10rem;
+        height:10rem;
+    }
+    .hero__image{
+        width:7rem;
+        height:7rem;
+    }
+    .hero__subtitle{
+        font-size: var(--size-3xl);
+    }
+    .text-animate .hero__title{
+        font-size: var(--size-xl);
+    }
+    .text-animate{
+        max-width:17rem;
+    }
+    .hero__content{
+        font-size: var(--size-base);
+    }
+
+    @keyframes homeBgText{
+        0%,10%,100%{
+            background-position: -17rem 0;
+        }
+        65%,85%{
+            background-position: 0 0;
+        }
+    }
+}
+@media (min-width:475px) {
+    .hero__main-image{
+        width:10.5rem;
+        height:10.5rem;
+    }
+    .hero__image{
+        width:7.5rem;
+        height:7.5rem;
+    }
+    .text-animate .hero__title{
+        font-size: 1.7rem;
+    }
+    .text-animate{
+        max-width:20rem;
+    }
+    .hero{
+        gap:1.5rem;
+    }
+    .hero__subtitle{
+        font-size: var(--size-4xl);
+    }
+    .text-animate .hero__title{
+        font-size: var(--size-2xl);
+    }
+    .hero__navigate{
+        font-size: var(--size-base);
+    }
+    @keyframes homeBgText{
+        0%,10%,100%{
+            background-position: -20rem 0;
+        }
+        65%,85%{
+            background-position: 0 0;
+        }
+    }
+}
+
+@media (min-width:640px) {
+    .hero__main-image{
+        width:12rem;
+        height:12rem;
+    }
+    .hero__image{
+        width:9rem;
+        height:9rem;
+    }
+    .hero__subtitle{
+        font-size: var(--size-5xl);
+    }
+    .text-animate .hero__title{
+        font-size: var(--size-3xl);
+    }
+    .text-animate{
+        max-width:24.5rem;
+    }
+    .hero__content{
+        font-size: var(--size-lg);
+    }
+    @keyframes homeBgText{
+        0%,10%,100%{
+            background-position: -24.5rem 0;
+        }
+        65%,85%{
+            background-position: 0 0;
+        }
+    }
+    
+}
+
+
+/* lg */
+@media (min-width:1024px) {
+    .hero__main-image{
+        width:14rem;
+        height:14rem;
+    }
+    .hero__image{
+        width:11rem;
+        height:11rem;
+    }
+    .text-animate{
+        max-width:29rem;
+    }
+    .hero__subtitle{
+        font-size: var(--size-6xl);
+    }
+    .text-animate .hero__title{
+        font-size: var(--size-4xl);
+    }
+    .hero__content{
+        font-size: var(--size-xl);
+    }
+    .hero__navigate{
+        font-size: var(--size-lg);
+    }
+    @keyframes homeBgText{
+        0%,10%,100%{
+            background-position: -29rem 0;
+        }
+        65%,85%{
+            background-position: 0 0;
+        }
+    }
+}
+
+/* xl */
+@media (min-width:1280px) {
+    .hero{
+        gap:1.5rem;
+    }
+    .text-animate{
+        max-width:32rem;
+    }
+    @keyframes homeBgText{
+        0%,10%,100%{
+            background-position: -32rem 0;
+        }
+        65%,85%{
+            background-position: 0 0;
+        }
+    }
+    .hero__subtitle{
+        font-size: var(--size-6xl);
+    }
+    .text-animate .hero__title{
+        font-size: 2.5rem;
+    }
+    .hero__content{
+        font-size: var(--size-xl);
+    }
+    .hero__navigate{
+        font-size: var(--size-xl);
+    }
+
+}

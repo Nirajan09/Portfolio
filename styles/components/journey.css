@@ -1,0 +1,152 @@
+.journey{
+    margin:1rem auto;
+    display: flex;
+    align-items: center;
+    gap:5rem;
+}
+.journey__title{
+    font-size:var(--size-2xl);
+    color:var(--clr-light);
+    margin-bottom: 3rem;
+}
+.journey__education-followup{
+    position: relative;
+    border-left: .2rem solid var(--clr-rose);
+    margin-left: .5rem;
+}
+.journey__education-followup::after{
+    content:'';
+    position: absolute;
+    top:0;
+    left:-1rem;
+    width:2rem;
+    height:2rem;
+    background-color: var(--clr-rose);
+    border-radius: 50%;
+}
+.journey__education-title{
+    font-size:var(--size-2xl);
+    color:var(--clr-light);
+    margin-bottom:0.5rem;
+    padding-left: 1rem;
+    
+    margin-left: 1.5rem;
+}
+.journey__education-content{
+    border:.2rem solid var(--clr-rose);
+    border-radius: .6rem;
+    padding:2rem;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+.journey__education-content:not(:last-child){
+    margin-bottom:2rem;
+}
+.journey__education-date{
+    font-size: var(--size-2xl);
+    color:var(--clr-light);}
+.journey__education{
+    flex:1;
+}
+
+.journey-education-year{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap:0.5rem;
+}
+.journey__education-board{
+    font-size: var(--size-2xl);
+    color:var(--clr-light);
+}
+.journey__education-description{
+    font-size: var(--size-sm);
+    color:var(--clr-slate600);
+}
+.journey-education-date{
+    font-size: var(--size-lg);
+    color:var(--clr-rose);
+}
+@media (min-width:250px) {
+    #journey__experience{
+        margin-top:1rem;
+        }
+        .journey{
+            display: block;
+        }
+}
+@media (min-width:475px){
+    .journey{
+        display: block;
+    }
+    .journey__title{
+        font-size:var(--size-3xl);
+    }
+    .journey__education-title{
+        font-size:var(--size-2xl);
+    }
+    .journey__education-content{
+        padding:1rem;
+    }
+    .journey__education-board{
+        font-size: var(--size-2xl);
+    }
+    .journey__education-description{
+        font-size: var(--size-base);
+    }
+    .journey-education-date{
+        font-size: var(--size-lg);
+    }
+}
+@media (min-width:1024px) {
+    .journey{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    #journey__experience{
+        margin-left:.5rem;
+        margin-top:0;
+    }
+    .journey__title{
+        font-size:var(--size-4xl);
+    }
+    .journey__education-title{
+        font-size:var(--size-3xl);
+    }
+    .journey__education-content{
+        padding:1.5rem;
+    }
+    .journey__education-board{
+        font-size: var(--size-3xl);
+    }
+    .journey__education-description{
+        font-size: var(--size-lg);
+    }
+    .journey-education-date{
+        font-size: var(--size-lg);
+    }
+}
+@media (min-width:1280px) {
+    .journey{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .journey__title{
+        font-size:var(--size-5xl);
+    }
+    .journey__education-title{
+        font-size:var(--size-3xl);
+    }
+    .journey__education-board{
+        font-size: var(--size-4xl);
+    }
+    .journey__education-description{
+        font-size: var(--size-xl);
+    }
+    .journey-education-date{
+        font-size: var(--size-xl);
+    }
+    
+}
