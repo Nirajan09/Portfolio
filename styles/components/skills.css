@@ -58,6 +58,9 @@
         width:9rem;
         height:9rem;
     }
+    .skills__info-description{
+        font-size: var(--size-xl);
+    }
 }
 @media (min-width:350px) {
     .box{
@@ -66,11 +69,11 @@
     .skills__content{
         gap:1rem;
     }
-    .skills__info{
+    /* .skills__info{
         padding:.7rem;
         width:10rem;
         height:10rem;
-    }
+    } */
 }
 @media (min-width:475px) {
     .skills__title{
