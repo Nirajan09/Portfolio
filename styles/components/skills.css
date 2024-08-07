@@ -50,6 +50,27 @@
     .box{
         font-size: var(--size-5xl);
     }
+    .skills__content{
+        gap:.5rem;
+    }
+    .skills__info{
+        padding:.8rem;
+        width:9rem;
+        height:9rem;
+    }
+}
+@media (min-width:350px) {
+    .box{
+        font-size: var(--size-5xl);
+    }
+    .skills__content{
+        gap:1rem;
+    }
+    .skills__info{
+        padding:.7rem;
+        width:10rem;
+        height:10rem;
+    }
 }
 @media (min-width:475px) {
     .skills__title{
@@ -59,9 +80,9 @@
         gap:2rem;
     }
     .skills__info{
-        padding:1rem;
-        width:12rem;
-        height:12rem;
+        padding:.8rem;
+        width:10rem;
+        height:10rem;
     }
     .box{
         font-size: var(--size-6xl);

@@ -74,6 +74,9 @@
         .journey{
             display: block;
         }
+        .journey__education-content{
+            padding:.5rem;
+        }
 }
 @media (min-width:475px){
     .journey{
@@ -86,16 +89,24 @@
         font-size:var(--size-2xl);
     }
     .journey__education-content{
-        padding:1rem;
+        padding:.5rem;
     }
     .journey__education-board{
-        font-size: var(--size-2xl);
+        font-size: var(--size-lg);
     }
     .journey__education-description{
         font-size: var(--size-base);
     }
     .journey-education-date{
         font-size: var(--size-lg);
+    }
+}
+@media (min-width:640px) {
+    .journey__education-board{
+        font-size: var(--size-xl);
+    }
+    .journey__education-content{
+        padding:.8rem;
     }
 }
 @media (min-width:1024px) {
